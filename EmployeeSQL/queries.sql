@@ -15,14 +15,12 @@ SELECT * FROM employees WHERE hire_date LIKE '1986%'
 
 Question 3
 ---------------------------------------------------------------
-SELECT dep.dept_no, dep.dept_name, man.emp_no, emp.last_name, emp.first_name, title.from_date, title.to_date
+SELECT dep.dept_no, dep.dept_name, man.emp_no, emp.last_name, emp.first_name, man.from_date, man.to_date
 FROM departments AS dep
 JOIN department_manager AS man
 ON dep.dept_no= man.dept_no
 JOIN employees AS emp
 ON man.emp_no = emp.emp_no
-JOIN title
-ON man.emp_no = title.emp_no
 
 
 Question 4
